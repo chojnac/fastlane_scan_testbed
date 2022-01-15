@@ -1,1 +1,6 @@
-FastlaneScanTestbed.xcodeproj/xcuserdata
+fastlane/test_output
+fastlane/tests_results
+xcuserdata/
+.DS_Store
+fastlane/report.xml
+fastlane/README.md

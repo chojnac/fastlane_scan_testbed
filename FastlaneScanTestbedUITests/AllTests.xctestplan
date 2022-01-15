@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "3FFA976C-B55E-4CDA-BB6E-A405D8C6D912",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FastlaneScanTestbed.xcodeproj",
+      "identifier" : "0E02C8B82792CB0F005434AD",
+      "name" : "FastlaneScanTestbed"
+    },
+    "testRepetitionMode" : "retryOnFailure"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FastlaneScanTestbed.xcodeproj",
+        "identifier" : "0E02C8D22792CB11005434AD",
+        "name" : "FastlaneScanTestbedUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

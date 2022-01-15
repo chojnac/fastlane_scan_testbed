@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "13C20E57-0F23-45BD-8515-33B7A8C82A10",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FastlaneScanTestbed.xcodeproj",
+        "identifier" : "0E02C8C82792CB10005434AD",
+        "name" : "FastlaneScanTestbedTests"
+      }
+    }
+  ],
+  "version" : 1
+}

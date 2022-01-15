@@ -1,0 +1,53 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Runs unit tests"
+  lane :test do
+    scan(
+      scheme: "FastlaneScanTestbed",
+      output_types: "junit",
+      skip_build: true,
+      code_coverage: true
+    )
+  end
+
+  desc "Build only UI tests"
+  lane :ui_tests_build do
+    scan(
+      scheme: "FastlaneScanTestbedUITests",
+      build_for_testing: true,
+      devices: ["iPhone 8", "iPhone 11 Pro"],
+      xcodebuild_formatter: "xcbeautify",
+      output_types: "junit",
+      result_bundle: false
+    )
+  end
+
+  desc "Run UI tests only "
+  lane :ui_tests_run do
+    run_ui_testplan("iPhone 8","AllTests")
+  end
+
+  def run_ui_testplan(device, testplan)
+    
+    scan(
+      test_without_building: true,
+      scheme: "FastlaneScanTestbedUITests",
+      reset_simulator: true,
+      disable_slide_to_type: true,
+      devices: [device],
+      testplan: testplan,
+      max_concurrent_simulators: 2,
+      code_coverage: false,
+      xcodebuild_formatter: "xcbeautify",
+      number_of_retries: 3,
+      result_bundle: true,
+      output_types: "junit"
+    )
+
+    trainer(
+      path: "fastlane/test_output/FastlaneScanTestbedUITests-3.xcresult"
+    )
+
+  end
+end
