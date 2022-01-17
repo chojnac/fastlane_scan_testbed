@@ -45,9 +45,5 @@ platform :ios do
       output_types: "junit"
     )
 
-    trainer(
-      path: "fastlane/test_output/FastlaneScanTestbedUITests-3.xcresult"
-    )
-
   end
 end
