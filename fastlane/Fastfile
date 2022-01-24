@@ -42,7 +42,19 @@ platform :ios do
       xcodebuild_formatter: "xcbeautify",
       number_of_retries: 3,
       result_bundle: true,
-      output_types: "junit"
+      output_directory: "test_results",
+      output_types: "junit",
+      output_remove_retry_attempts: true
+    )
+
+    FileUtils.mkdir_p('test_output')
+    FileUtils.mv(
+      File.expand_path("../test_results/FastlaneScanTestbedUITests.xcresult"),
+      File.expand_path("test_output/#{testplan}.xcresult")
+    )
+    FileUtils.mv(
+      File.expand_path("../test_results/report.junit"),
+      File.expand_path("test_output/#{testplan}_uitest_report.junit")
     )
 
   end

@@ -15,7 +15,7 @@
       "identifier" : "0E02C8B82792CB0F005434AD",
       "name" : "FastlaneScanTestbed"
     },
-    "testRepetitionMode" : "retryOnFailure"
+    "testRepetitionMode" : "fixedIterations"
   },
   "testTargets" : [
     {

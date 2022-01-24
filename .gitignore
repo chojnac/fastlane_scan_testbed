@@ -4,3 +4,5 @@ xcuserdata/
 .DS_Store
 fastlane/report.xml
 fastlane/README.md
+fastlane/logs
+test_results
